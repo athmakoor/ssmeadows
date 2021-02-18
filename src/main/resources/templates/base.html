@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title layout:fragment="title">Mooddit</title>
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <link href='/css/lib/fonts.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular-animate.min.js"></script>
+    <script src="/js/lib/jquery.cookie.js"></script>
+    <script src="/js/lib/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="/css/lib/owl.carousel.min.css" type="text/css"/>
+    <link rel="icon" href="/images/logo.png" type="image/jpeg">
+    <script src="/js/main.js"></script>
+    <link href="/css/style.css" rel='stylesheet' type='text/css' />
+    <script type="text/javascript">
+            addEventListener("load", function () {
+                setTimeout(hideURLbar, 0);
+            }, false);
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+
+
+        </script>
+    <style>
+            .box {
+                color: #fff;
+                padding: 20px;
+                display: none;
+                margin-top: 20px;
+            }
+            #BookedDiv {
+                color: #fff;
+                padding: 20px;
+                display: none;
+                margin-top: 20px;
+            }
+            #AvailableDiv {
+                color: #fff;
+                padding: 20px;
+                display: none;
+                margin-top: 20px;
+            }
+
+
+            .red1{
+                background: red;
+            }
+
+            .green7{
+                background-color: green;
+            }
+        </style>
+
+</head>
+<body ng-app="main-app" ng-controller="mainCtrl">
+<div class="content">
+    <div layout:fragment="content">...</div>
+</div>
+
+
+<div layout:fragment="scripts">...</div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    window.category = /*[[${CATEGORY}]]*/ null;
+    window.isHome = /*[[${HOME}]]*/ null;
+    window.provider = /*[[${PROVIDER}]]*/ null;
+    window.authenticated = /*[[${AUTHENTICATED}]]*/ null;
+    window.msisdn = /*[[${MSISDN}]]*/ null;
+    window.partner = /*[[${PARTNER}]]*/ null;
+    window.partnerTransactionId = /*[[${TRANSACTION_ID}]]*/ null;
+    window.alertMessage = /*[[${MESSAGE}]]*/ null;
+
+    /*]]>*/
+</script>
+</body>
+</html>
