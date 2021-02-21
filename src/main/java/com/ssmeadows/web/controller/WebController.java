@@ -26,6 +26,12 @@ public class WebController {
         return "admin";
     }
 
+    @GetMapping("/login")
+    public String login(final Map<String, Object> model) {
+        webService.updateDefaultModel(model);
+        return "login";
+    }
+
     @GetMapping("/views/**")
     public String others(final Map<String, Object> model) {
         webService.updateDefaultModel(model);

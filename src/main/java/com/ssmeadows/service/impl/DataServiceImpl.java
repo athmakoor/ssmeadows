@@ -41,6 +41,12 @@ public class DataServiceImpl implements DataService {
     @Override
     public Plot update(Plot data) {
         PlotEntity entity = plotRepository.findById(data.getId()).get();
+
+        if ("Available".equals(data.getStatus())) {
+            data.setOwnerLocation("");
+            data.setOwnerName("");
+        }
+
         plotMapper.mapDTOToEntity(data, entity);
 
         PlotEntity savedEntity = plotRepository.save(entity);
@@ -66,5 +72,10 @@ public class DataServiceImpl implements DataService {
     @Override
     public Boolean login(AuthRequest data) {
         return true;
+    }
+
+    @Override
+    public Boolean validateLogin(AuthRequest data) {
+        return "admin@ssmeadows.co.in".equals(data.getUserName()) && "$$me@d0ws".equals(data.getPassword());
     }
 }

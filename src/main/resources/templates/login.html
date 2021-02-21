@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Sri Skanda Developers</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/logo.png" type="image/jpeg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular-animate.min.js"></script>
+    <script src="/js/lib/jquery.cookie.js"></script>
+    <script src="/js/admin.js"></script>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Bootstrap-Core-CSS -->
+    <link href="/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Style-CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link
+            href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+            rel="stylesheet">
+    <link
+            href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+            rel="stylesheet">
+    <!-- //Web-Fonts -->
+</head>
+
+<body ng-app="main-app" ng-controller="authCtrl">
+<!-- header -->
+<header>
+    <div class="container">
+        <div class="header d-lg-flex justify-content-between align-items-center py-2 px-sm-2 px-1">
+            <!-- logo -->
+            <div id="logo">
+                <a href="index.jsp"> <img src="/images/logo.png" alt="logo" style="width: 30px; height: 30px;">
+                    Sri&nbsp;<span style="color: #fff">&nbsp;Skanda</span>&nbsp;Developers
+                </a>
+                <!--  -->
+            </div>
+        </div>
+
+    </div>
+</header>
+<!-- //header -->
+
+<!-- inner banner -->
+<div class="inner-banner-w3ls py-5" id="home">
+    <div class="container py-xl-5 py-lg-3">
+        <!-- login  -->
+        <div class="modal-body my-5 pt-4">
+
+            <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold" > <span id="alarmmsg">Login Now </span></h3>
+            <form>
+                <div class="form-group">
+                    <label class="col-form-label">Username</label>
+                    <input ng-model="details.userName" type="text" class="form-control" placeholder="Username" name="username" required="">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Password</label>
+                    <input ng-model="details.password" type="password" class="form-control" placeholder="*****" name="password" required="">
+                </div>
+                <button ng-click="login()" type="submit" class="btn button-style-w3">Login</button>
+                <div style="text-align: center;color: red;">{{msg}}</div>
+                <div class="row sub-w3l mt-3 mb-5">
+                    <div class="col-sm-6 sub-w3layouts_hub">
+                    </div>
+                    <div class="col-sm-6 forgot-w3l text-sm-right">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- //login -->
+    </div>
+</div>
+
+<!-- copyright -->
+<div class="copyright-w3ls py-4">
+    <div class="container">
+        <div class="row">
+            <!-- copyright -->
+            <p class="col-lg-12 copy-right-grids text-wh text-lg-left text-center mt-lg-2">Regd. Office: Flat No.102, Sree Divya
+                Heights, Plot No. 102,# 12-11-705A, Warasiguda, Secunderabad, Telangana - 500061.
+            </p>
+            <p class="col-lg-12 copy-right-grids text-wh text-lg-left text-center mt-lg-2">Corporate Office: #11-3-362/3, Makam Ramulu Complex, Mohammad Guda, Warasiguda, Secunderabad - 500061.
+            </p>
+
+            <p class="col-lg-12 copy-right-grids text-wh text-lg-left text-center mt-lg-2"><a
+                    href="http://www.vkandigital.com/" target="_blank">© 2019 Vkan Digital Solutions.All
+                Rights Reserved.</a>
+
+            </p>
+            <!-- //copyright -->
+            <!-- social icons -->
+            <div class="col-lg-4 w3social-icons text-lg-right text-center mt-lg-0 mt-3">
+
+            </div>
+            <!-- //social icons -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -7,8 +7,6 @@ public class Plot implements Serializable {
 
     private Integer id;
 
-    private String name;
-
     private String status;
 
     private String ownerName;
@@ -21,14 +19,6 @@ public class Plot implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getStatus() {

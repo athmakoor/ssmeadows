@@ -19,4 +19,6 @@ public interface DataService {
     StatsData getStats();
 
     Boolean login(AuthRequest data);
+
+    Boolean validateLogin(AuthRequest data);
 }

@@ -28,21 +28,6 @@ public class DataController {
         return data;
     }
 
-    @PostMapping("/plot/update")
-    public Plot updateStatus(@RequestBody final Plot data) {
-        return dataService.update(data);
-    }
-
-    @PostMapping("/update-stats")
-    public StatsData updateStatus(@RequestBody final StatsData data) {
-        return dataService.updateStats(data);
-    }
-
-    @GetMapping("/get-stats")
-    public StatsData getStatus() {
-        return dataService.getStats();
-    }
-
     @PostMapping("/login")
     public Boolean login(@RequestBody final AuthRequest data) {
         return dataService.login(data);
